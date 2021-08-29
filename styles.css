@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100%;
+    font-family: 'Amiko', sans-serif;
+}
+header{
+    width: 100%;
+    height: 505x;
+    background: #FC918B;
+    color: #fff;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+#nav-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+h1{
+    float: left;
+    font-family: 'Fredoka One', cursive;
+}
+header .contenedor{
+    display: table;
+}
+.menu{
+position: absolute;
+width: 100%;
+height: 100vh;
+background: #FC918B;
+top: 50px;;
+left:0;
+transition: all 0.5s;
+transform: translateX(-100%);
+}
+#nav-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+.lista-menu li{
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
+
+}
+.lista-menu li a{
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration:none ;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255,255, 0.5) ;
+
+}
+.lista-menu li a:hover{
+    
+    background: rgba(255, 255,255, 0.3) ;
+
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#banner{
+margin-top: 50px;
+position: relative;
+width: 100vw;
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-50%);
+    color: #fff;
+}
+#banner h2{
+    font-size: 25px;
+}
+#banner a{
+    display: block;
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+#banner a:hover{
+    
+    background: #FC918B;
+}
+#bienvenidos{
+    text-align: center;
+}
+#bienvenidos h2{
+    background-color: #FCD28B;
+    margin-bottom: 5px;
+}
+#blog .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#blog article{
+    margin: 15px;
+}
+#blog img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 5px;
+    border: #F5B592 outset 8px;
+}
+#blog h3, h4{
+    text-align: center;
+}
+#blog h3{
+    background-color: #F5B592;
+}
+#info{
+    background: #DEAC7A;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#info .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.info-pet{
+    margin: 20px;
+}
+.info-pet img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+footer  .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy{
+    font-size: 20px;
+    
+}
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+
+}
+
+@media (min-width: 1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+
+    }
+    header label{
+        display: none;
+    }
+    
+    .lista-menu {
+        display:flex;
+        flex-wrap: wrap;
+    
+    }
+    .contenedor{
+        width: 1000px;
+    }
+    #banner{
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        margin-top: -400px ;
+        height: auto;
+    }
+    .info-pet img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 7px solid #fff;
+    }
+    
+}
+@media (min-width: 480px){
+    #banner{
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 0px;
+    }
+    #banner h2{
+        font-size: 30px;
+        font-family: 'Fredoka One', cursive;
+    }
+    #banner a {
+        margin-top: 10px;
+    }
+    #banner img{
+        margin-top: -50px ;
+        height: auto;
+    }
+    h1{ 
+        font-size: 30px;
+        padding-top: 4px;
+    }    
+
+    #banner .contenedor {
+        margin-left: 10px;
+    }
+    .info-pet img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 7px solid #fff;
+    }
+    
+}
+@media (min-width: 768px){
+    #banner{
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        height: auto;
+        margin-top: -150px;
+
+    }
+    #bienvenidos{
+        margin-top: 20px;
+    }
+    .info-pet img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 7px solid #fff;
+    }
+}
+@media (min-width: 1366px){
+    #banner img{
+        height: auto;
+        margin-top: -340px;
+
+    } 
+    .info-pet img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 7px solid #fff;
+    }
+    
+}
